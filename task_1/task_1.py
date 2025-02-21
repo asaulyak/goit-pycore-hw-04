@@ -14,7 +14,7 @@ def total_salary(path):
                     if not salary_str:
                         print("No salary found")
 
-                    salary = int(salary_str.strip())
+                    salary = parse_salary(salary_str)
 
                     lines.append(salary)
     except Exception as e:
@@ -29,3 +29,10 @@ def total_salary(path):
     average = total / items_count
 
     return total, average
+
+def parse_salary(salary_str):
+    try:
+        return int(salary_str.strip())
+    except Exception as e:
+        print(e)
+        return 0
