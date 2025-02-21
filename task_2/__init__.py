@@ -1,0 +1,1 @@
+from .task_2 import get_cats_info
