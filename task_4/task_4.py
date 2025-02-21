@@ -1,6 +1,6 @@
 from .command import parser
 
-def task_1():
+def task_4():
     contacts = {}
 
     print("Welcome to the assistant bot!")
