@@ -1,4 +1,4 @@
-from .command import parser
+from command import parser
 
 def task_4():
     contacts = {}
@@ -19,3 +19,9 @@ def task_4():
 
         if stop:
             break
+
+def main():
+    task_4()
+
+if __name__ == "__main__":
+    main()

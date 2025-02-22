@@ -1,3 +1,6 @@
+import sys
+
+
 def total_salary(path):
     lines = []
 
@@ -26,7 +29,7 @@ def total_salary(path):
         return 0, 0
 
     total = sum(lines)
-    average = total / items_count
+    average = int(total / items_count)
 
     return total, average
 
@@ -36,3 +39,11 @@ def parse_salary(salary_str):
     except Exception as e:
         print(e)
         return 0
+
+def main():
+    path = sys.argv[1]
+    total, average = total_salary(path)
+    print(f"Total: {total}, Average: {average}")
+
+if __name__ == "__main__":
+    main()

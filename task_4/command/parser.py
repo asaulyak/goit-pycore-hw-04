@@ -39,6 +39,9 @@ def get_command(command_name):
     return command
 
 def parse_command(user_input):
+    if not user_input:
+        return 'not_a_command', []
+
     cmd, *args = user_input.split()
     cmd = cmd.strip().lower()
 

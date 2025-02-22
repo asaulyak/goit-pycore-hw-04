@@ -1,3 +1,6 @@
+import sys
+
+
 def get_cats_info(path):
     cats = []
 
@@ -31,3 +34,11 @@ def parse_cat_info(cat_info):
     except Exception as e:
         print(e)
         return None
+
+def main():
+    path = sys.argv[1]
+    cats = get_cats_info(path)
+    print(cats)
+
+if __name__ == "__main__":
+    main()
